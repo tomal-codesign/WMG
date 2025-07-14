@@ -2903,10 +2903,6 @@ header.main-header .header-sticky.active {
 }
 
 .our-approach {
-	background-image: url('../images/section-bg-img-1.png');
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	background-size: auto;
 	padding: 100px 0;
 }
 
@@ -3011,10 +3007,6 @@ header.main-header .header-sticky.active {
 }
 
 .our-facility {
-	background-image: url('../images/section-bg-img-1.png');
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	background-size: auto;
 	padding: 100px 0;
 }
 
@@ -3087,6 +3079,7 @@ header.main-header .header-sticky.active {
 }
 
 .our-facility-item:hover .our-facility-content h3,
+.our-facility-item:hover .our-facility-content ul li,
 .our-facility-item:hover .our-facility-content p {
 	color: var(--white-color);
 }
