@@ -1,6 +1,9 @@
 :root {
 	--primary-color: #0B1030;
-	--secondary-color: #F3F3FF;
+	--btn-color: #ffc400;
+	--bullet-color: #c8102e;
+	--heading-color: #003b73;
+	--secondary-color: #c8102e17;
 	--text-color: #556171;
 	--accent-color: #4753BF;
 	--accent-color-two: #506CD7;
@@ -152,8 +155,8 @@ body {
 	font-weight: 600;
 	line-height: 1em;
 	text-transform: capitalize;
-	background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-color-two) 100%);
-	color: var(--white-color);
+	background: var(--btn-color);
+	color: var(--primary-color);
 	border-radius: 50px;
 	padding: 17px 30px;
 	border: none;
@@ -164,6 +167,7 @@ body {
 
 .btn-default:hover {
 	background-color: transparent;
+	color: var(--white-color);
 }
 
 .btn-default::after,
@@ -304,21 +308,20 @@ body {
 }
 
 .section-title h1 {
-	font-size: 68px;
+	font-size: 60px;
 	font-weight: 600;
 	line-height: 1.1em;
-	letter-spacing: -0.02em;
-	color: var(--primary-color);
+	letter-spacing: .5px;
+	color: var(--heading-color);
 	margin-bottom: 0;
-	cursor: none;
 }
 
 .section-title h2 {
 	font-size: 46px;
 	font-weight: 600;
 	line-height: 1.1em;
-	letter-spacing: -0.02em;
-	color: var(--primary-color);
+	letter-spacing: .5px;
+	color: var(--heading-color);
 	margin-bottom: 0;
 }
 
@@ -721,7 +724,6 @@ header.main-header .header-sticky.active {
 
 .hero {
 	position: relative;
-	background-image: url('../images/hero-bg-shape-1.png');
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: 100% auto;
@@ -734,7 +736,6 @@ header.main-header .header-sticky.active {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: url('../images/hero-bg-shape-2.png') no-repeat;
 	background-position: bottom center;
 	background-size: 100% auto;
 	width: 100%;
@@ -851,7 +852,7 @@ header.main-header .header-sticky.active {
 }
 
 .hero-content .section-title p {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .hero-btn {
@@ -907,14 +908,12 @@ header.main-header .header-sticky.active {
 
 .hero-image {
 	position: relative;
-	background: url('../images/hero-img-bg-shape.png') no-repeat;
 	background-position: top 30px center;
 	background-size: auto;
 }
 
 .hero-img img {
 	width: 100%;
-	aspect-ratio: 1 / 1.273;
 	object-fit: contain;
 }
 
@@ -1490,7 +1489,7 @@ header.main-header .header-sticky.active {
 	position: relative;
 	border-radius: 26px;
 	overflow: hidden;
-	padding: 190px 50px;
+	padding: 240px 50px;
 }
 
 .intro-video-image {
@@ -1503,18 +1502,6 @@ header.main-header .header-sticky.active {
 	height: 100%;
 }
 
-.intro-video-image::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: linear-gradient(180deg, rgba(11, 16, 48, 0) 0%, #0B1030 100%);
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-}
 
 .intro-video-image figure,
 .intro-video-image img {
@@ -2857,7 +2844,6 @@ header.main-header .header-sticky.active {
 .page-header {
 	position: relative;
 	background-color: var(--secondary-color);
-	background-image: url('../images/page-header-bg.png');
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	background-size: 100% auto;
@@ -4865,6 +4851,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.hero-content {
+		margin-top: 30px;
 		margin-bottom: 30px;
 	}
 
@@ -4917,6 +4904,7 @@ header.main-header .header-sticky.active {
 
 	.about-us-content {
 		margin-right: 0px;
+		margin-top: 30px;
 		margin-bottom: 30px;
 	}
 
@@ -5748,7 +5736,14 @@ header.main-header .header-sticky.active {
 }
 
 @media only screen and (max-width: 767px) {
-
+	.footer-social-link ul {
+		flex-wrap: wrap;
+		gap: 10px;
+		width: 100%;
+	}
+.footer-social-link hr{
+	display: none;
+}
 	.topbar-social-details {
 		display: none;
 	}
@@ -5775,10 +5770,6 @@ header.main-header .header-sticky.active {
 	.topbar-contact-info ul li a i {
 		font-size: 14px;
 		margin-right: 5px;
-	}
-
-	.section-title h3 {
-		padding-left: 30px;
 	}
 
 	.section-title h3::before {
@@ -5846,7 +5837,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.satisfied-clients-content {
-		width: calc(100% - 43px);
+		width: 100%;
 	}
 
 	.about-info-item .icon-box {
@@ -5872,7 +5863,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.about-us-images {
-		padding: 0 30px;
+		padding: 30px;
 	}
 
 	.about-img-1 img {
@@ -5939,7 +5930,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.intro-video-box {
-		padding: 50px 15px;
+		padding: 120px 15px;
 	}
 
 	.video-play-button a {
@@ -6405,4 +6396,9 @@ header.main-header .header-sticky.active {
 	.error-page-content {
 		max-width: 100%;
 	}
+}
+
+.active {
+	color: var(--bullet-color) !important;
+	font-weight: 600 !important;
 }
